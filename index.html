@@ -15,7 +15,10 @@
 					<a href="about.html">About</a>
 					<a href="projects.html">Projects</a>
 				</nav>
-				<button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+				<div class="header-actions">
+					<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">🌙</button>
+					<button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+				</div>
 			</div>
 		</header>
 
@@ -26,7 +29,7 @@
 					<img id="profile-img" src="placeholder-profile.png" alt="Your Name">
 				</div>
 				<div class="hero-content">
-					<h1>Your Name</h1>
+					<h1>Cavid Hasanli</h1>
 					<p class="lead">Brief information about you. A one- or two-line intro that summarizes who you are.</p>
 					<p class="icons">
 						<a href="about.html" aria-label="About page">About</a>
@@ -38,6 +41,7 @@
 			<section class="container" id="contact">
 				<h2>Contact</h2>
 				<p>If you'd like to get in touch, send a message below.</p>
+				<p>Email: <a href="mailto:cavidhesenli106@gmail.com">cavidhesenli106@gmail.com</a></p>
 				<form id="contact-form">
 					<label for="name">Name</label>
 					<input id="name" name="name" required>
@@ -48,7 +52,7 @@
 					<label for="message">Message</label>
 					<textarea id="message" name="message" rows="4" required></textarea>
 
-					<button type="submit">Send (demo)</button>
+					<button type="submit">Send</button>
 					<p id="form-status" class="status" aria-live="polite"></p>
 				</form>
 			</section>
@@ -56,7 +60,7 @@
 
 		<footer class="site-footer">
 			<div class="container">
-				<small>&copy; <span id="year"></span> Your Name</small>
+				<small>&copy; <span id="year"></span> Cavid Hasanli. All rights reserved. Built with HTML/CSS/JS</small>
 			</div>
 		</footer>
 

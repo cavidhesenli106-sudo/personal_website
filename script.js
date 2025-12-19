@@ -13,6 +13,30 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   }
 
+  // theme toggle: persist in localStorage
+  const themeToggle = document.getElementById('theme-toggle');
+  const applyTheme = (theme) => {
+    if(theme === 'dark') document.body.classList.add('dark-mode'); else document.body.classList.remove('dark-mode');
+    if(themeToggle) {
+      themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+  };
+
+  // initialize theme from storage or prefers-color-scheme
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+
+  if(themeToggle){
+    themeToggle.addEventListener('click', ()=>{
+      const isDark = document.body.classList.contains('dark-mode');
+      const next = isDark ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('theme', next);
+    });
+  }
+
   // contact form demo
   const form=document.getElementById('contact-form');
   if(form){
