@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Home — My Site</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container">
+				<a class="brand" href="index.html">MySite</a>
+				<nav class="main-nav">
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="projects.html">Projects</a>
+				</nav>
+				<button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero container">
+				<div class="hero-image">
+					<!-- Replace src with your uploaded image -->
+					<img id="profile-img" src="placeholder-profile.png" alt="Your Name">
+				</div>
+				<div class="hero-content">
+					<h1>Your Name</h1>
+					<p class="lead">Brief information about you. A one- or two-line intro that summarizes who you are.</p>
+					<p class="icons">
+						<a href="about.html" aria-label="About page">About</a>
+						<a href="projects.html" aria-label="Projects page">Projects</a>
+					</p>
+				</div>
+			</section>
+
+			<section class="container" id="contact">
+				<h2>Contact</h2>
+				<p>If you'd like to get in touch, send a message below.</p>
+				<form id="contact-form">
+					<label for="name">Name</label>
+					<input id="name" name="name" required>
+
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email" required>
+
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="4" required></textarea>
+
+					<button type="submit">Send (demo)</button>
+					<p id="form-status" class="status" aria-live="polite"></p>
+				</form>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				<small>&copy; <span id="year"></span> Your Name</small>
+				<nav class="footer-nav">
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="projects.html">Projects</a>
+				</nav>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
